@@ -99,6 +99,10 @@ app.use("/", userRouter);
 //     res.send("Hi, I am root");
 // });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 // ✅ Optional: Error handling
 // app.all("*", (req, res, next) => {
 //     next(new ExpressError(404, "Page Not Found"));
